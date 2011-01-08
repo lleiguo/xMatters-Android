@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+		<TextView android:text="@string/server" android:id="@+id/Server" android:layout_width="fill_parent" android:layout_height="wrap_content">
+		</TextView>
+		<EditText android:id="@+id/serverValue" android:background="@android:drawable/editbox_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/Server">
+		</EditText>
+		<TextView android:text="@string/company" android:id="@+id/Company" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/Server">
+		</TextView>
+		<EditText android:id="@+id/companyValue" android:background="@android:drawable/editbox_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/Company">
+		</EditText>
+		<TextView android:text="@string/user" android:id="@+id/UserName" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/Company">
+		</TextView>
+		<EditText android:id="@+id/userValue" android:background="@android:drawable/editbox_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/UserName">
+		</EditText>
+		<TextView android:text="@string/password" android:id="@+id/Password" android:layout_width="fill_parent" android:layout_height="wrap_content"  android:layout_below="@id/UserName">
+		</TextView>
+		<EditText android:id="@+id/passwordValue" android:background="@android:drawable/editbox_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/Password">
+		</EditText>
+
+</RelativeLayout>
