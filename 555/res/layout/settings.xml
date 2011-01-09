@@ -52,17 +52,19 @@
         android:background="@android:drawable/editbox_background"
         android:layout_below="@id/password" android:password="true"/>
     <Button
-        android:id="@+id/ok"
+        android:id="@+id/reset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/passwordText"
         android:layout_alignParentRight="true"
+        android:layout_below="@id/passwordText"
         android:layout_marginLeft="10dip"
-        android:text="Register" />
+        android:layout_marginTop="10dip"
+        android:text="Reset" />
     <Button
+        android:id="@+id/register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toLeftOf="@id/ok"
-        android:layout_alignTop="@id/ok"
-        android:text="Cancel" />
+        android:layout_toLeftOf="@id/reset"
+        android:layout_alignTop="@id/reset"
+        android:text="Register" />
 </RelativeLayout>
