@@ -2,22 +2,67 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
-
-		<TextView android:text="@string/server" android:id="@+id/Server" android:layout_width="fill_parent" android:layout_height="wrap_content">
-		</TextView>
-		<EditText android:id="@+id/serverValue" android:background="@android:drawable/editbox_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/Server">
-		</EditText>
-		<TextView android:text="@string/company" android:id="@+id/Company" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/Server">
-		</TextView>
-		<EditText android:id="@+id/companyValue" android:background="@android:drawable/editbox_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/Company">
-		</EditText>
-		<TextView android:text="@string/user" android:id="@+id/UserName" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/Company">
-		</TextView>
-		<EditText android:id="@+id/userValue" android:background="@android:drawable/editbox_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/UserName">
-		</EditText>
-		<TextView android:text="@string/password" android:id="@+id/Password" android:layout_width="fill_parent" android:layout_height="wrap_content"  android:layout_below="@id/UserName">
-		</TextView>
-		<EditText android:id="@+id/passwordValue" android:background="@android:drawable/editbox_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/Password">
-		</EditText>
-
+    <TextView
+        android:id="@+id/server"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Server:"
+        android:textStyle="bold"/>
+    <EditText
+        android:id="@+id/serverValue"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background"
+        android:layout_below="@id/server" android:inputType="textUri"/>
+    <TextView
+        android:id="@+id/company"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Company:"
+        android:layout_below="@id/serverValue"
+        android:textStyle="bold"/>
+    <EditText
+        android:id="@+id/companyValue"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background"
+        android:layout_below="@id/company" />
+    <TextView
+        android:id="@+id/user"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="User Name:"
+        android:layout_below="@id/companyValue" android:keepScreenOn="true" android:textStyle="bold"/>
+    <EditText
+        android:id="@+id/userText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background"
+        android:layout_below="@id/user"/>
+    <TextView
+        android:id="@+id/password"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Password:"
+        android:layout_below="@id/userText" android:typeface="sans" android:textStyle="bold"/>
+    <EditText
+        android:id="@+id/passwordText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background"
+        android:layout_below="@id/password" android:password="true"/>
+    <Button
+        android:id="@+id/ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwordText"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dip"
+        android:text="Register" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/ok"
+        android:layout_alignTop="@id/ok"
+        android:text="Cancel" />
 </RelativeLayout>
