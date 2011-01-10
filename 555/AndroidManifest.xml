@@ -20,7 +20,9 @@
                   android:label="@string/settings">
         </activity>
 
+    	<service android:name="com.xmatters.mobile.android.service.SoapService" />
     </application>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
     <uses-sdk android:minSdkVersion="7" />
 
 </manifest>
