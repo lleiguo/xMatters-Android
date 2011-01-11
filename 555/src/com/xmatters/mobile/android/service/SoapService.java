@@ -23,9 +23,10 @@ public class SoapService extends Service {
 		}
 	}
 
-	public SoapResult registerDevice(String serverUrl, String companyName, String username, String password) {
+	public SoapResult registerDevice(String serverUrl, String companyName,
+			String username, String password) {
 		String absoluteWebServiceUrl = serverUrl + WEB_SERVICE_URL;
-		
+
 		SoapObject userServiceProvider = new SoapObject(NAMESPACE,
 				"userServiceProvider");
 		userServiceProvider.addProperty("identifier",
@@ -63,21 +64,21 @@ public class SoapService extends Service {
 				registerDeviceParams);
 
 		SoapResult result = new SoapResult();
-
 		try {
 			SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(
 					SoapEnvelope.VER11);
 			envelope.setOutputSoapObject(mobileRegisterDevice);
-			HttpTransportSE httpTransport = new HttpTransportSE(absoluteWebServiceUrl);
-			//httpTransport.debug = true;
-			httpTransport.call(absoluteWebServiceUrl + "/" + "MobileRegisterDevice",
-					envelope);
+			HttpTransportSE httpTransport = new HttpTransportSE(
+					absoluteWebServiceUrl);
+			// httpTransport.debug = true;
+			httpTransport.call(absoluteWebServiceUrl + "/"
+					+ "MobileRegisterDevice", envelope);
 			SoapObject response = (SoapObject) envelope.getResponse();
-			result.setStatus(response.getProperty(1).toString());
-			result.setMessage(response.getProperty(2).toString());
+			 result.setStatus(response.getProperty(1).toString());
+			 result.setMessage(response.getProperty(2).toString());
 		} catch (Exception ex) {
-			result.setStatus("System Exception");
-			result.setStatus(ex.getMessage());
+			 result.setStatus("System Exception");
+			 result.setStatus(ex.getMessage());
 		}
 
 		return result;

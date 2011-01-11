@@ -25,9 +25,10 @@ public class xMattersTabActivity extends TabActivity {
         tabHost.addTab(spec);
 
         intent = new Intent().setClass(this, MyAlertsActivity.class);
-        spec = tabHost.newTabSpec("myalerts").setIndicator("My Alerts",
-                          res.getDrawable(R.drawable.myalerts))
+        spec = tabHost.newTabSpec("myalerts")
+                      .setIndicator("My Alerts", res.getDrawable(R.drawable.myalerts))
                       .setContent(intent);
+        
         tabHost.addTab(spec);
 
         tabHost.setCurrentTab(0);
